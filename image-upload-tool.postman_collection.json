@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "b4b3d16a-8b61-4716-ac49-903bb4a92dc3",
+		"name": "image-upload-tool",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"filename\":\"cisco.png\",\n    \"description\":\"Test file description\",\n    \"path\":\"/Users/anja/Desktop/Personal/media/icons/cisco.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4000/upload/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:4000/download?filename=cisco.png",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"download"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "cisco.png"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all images",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:4000/list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
